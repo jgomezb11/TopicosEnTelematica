@@ -1,0 +1,7 @@
+1,keyboard
+2,mouse
+3,screen
+4,VideoBean
+5,grafica
+6,pastel
+7,speaker

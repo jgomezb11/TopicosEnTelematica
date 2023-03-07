@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+message ProductExistRequest{
+    string name_product = 1;
+}
+
+message ProductExistResponse{
+    int32 product_id = 1;
+}
+
+message ProductSaleRequest{
+    string name_product = 1;
+}
+
+message ProductSaleResponse{
+    int32 status_code = 1;
+}
+
+service ProductInventary{
+    rpc ProductExist(ProductExistRequest) returns (ProductExistResponse) {}
+}
+
+service ProductSale{
+    rpc SellProduct(ProductSaleRequest) returns (ProductSaleResponse) {}
+}

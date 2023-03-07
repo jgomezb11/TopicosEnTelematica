@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message ProductExistRequest{
+    string name_product = 1;
+}
+
+message ProductExistResponse{
+    int32 product_id = 1;
+}
+
+service ProductInventary{
+    rpc ProductExist(ProductExistRequest) returns (ProductExistResponse) {}
+    rpc WriteProduct(ProductExistRequest) returns (ProductExistResponse) {}
+}
