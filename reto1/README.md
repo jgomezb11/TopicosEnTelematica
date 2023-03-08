@@ -56,6 +56,7 @@ Como lo mencionamos se implementaron 3 microservicios y 1 API Gateway, la estruc
 ## Arquitectura de la solución planteada
 ---
 ![arquitectura](https://raw.githubusercontent.com/jgomezb11/TopicosEnTelematica/main/static/img/arquitectura.png)
+
 La arquitectura de la solución planteada se basa en una arquitectura en capas, donde cada capa se encarga de una función específica en el proceso. La capa del mundo real se encarga de tener un dispositivo que pueda usar el protocolo HTTP 1.1 y poder mandar peticiones al servidor. La API Gateway se encarga de coordinar la comunicación entre dichos microservicios y la comunicación con el usuario. La capa de microservicios se encarga de la lógica de negocio y procesamiento de datos.
 
 Además, se ha utilizado un patron de diseño en la implementación de la solución:
