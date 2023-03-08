@@ -1,53 +1,5 @@
 # Reto_N1
 > Repositorio para alojar la solución al reto #1 sobre microservicios comunicándose con gRPC.
-## Tabla de contenidos:
----
-
-1.  [Información de la asignatura](#información-de-la-asignatura)
-
-2. [Datos del estudiante](#datos-del-estudiante)
-
-3. [Descripción y alcance del proyecto](#descripción-y-alcance-del-proyecto)
-
-4. [Estructura del proyecto](#estructura-del-proyecto)
-
-5. [Arquitectura de la solución planteada](#arquitectura-de-la-solución-planteada)
-
-6. [Resultados logrados](#resultados-logrados)
-
-7. [Descripción técnica de la solución implementada](#descripción-técnica-de-la-solución-implementada)
-	- [API_Gateway](#api_gateway)
-		- [Tecnologías usadas y ejecución de API](#tecnologías-usadas-y-ejecución-de-api)
-		- [Librerías de API](#librerías-de-api)
-		- [Parametrización de API](#parametrización-de-api)
-	- [Envios](#envios)
-		- [Tecnologías usadas y ejecución de Envios](#tecnologías-usadas-y-ejecución-de-envios)
-		- [Librerías de Envios](#librerías-de-envios)
-		- [Parametrización de Envios](#parametrización-de-envios)
-	- [Inventario](#inventario)
-		- [Tecnologías usadas y ejecución de Inventario](#tecnologías-usadas-y-ejecución-de-inventario)
-		- [Librerías de Inventario](#librerías-de-inventario)
-		- [Parametrización de Inventario](#parametrización-de-inventario)
-	- [Resena](#resena)
-		- [Tecnologías usadas y ejecución de Resena](#tecnologías-usadas-y-ejecución-de-resena)
-		- [Librerías de Resena](#librerías-de-resena)
-		- [Parametrización de Resena](#parametrización-de-resena)
-
-8. [Guía de uso](#guía-de-uso)
-	- [Peticiones de microservicio inventario](#peticiones-de-microservicio-inventario)
-		- [createProduct](#createproduct)
-		- [readProduct](#readproduct)
-		- [getAllProducts](#getallproducts)
-		- [updateProduct](#updateproduct)
-		- [deleteProduct](#deleteproduct)
-	- [Peticiones de microservicio envíos](#peticiones-de-microservicio-envíos)
-		- [createOrder](#createorder)
-		- [getOrder](#getorder)
-		- [updateOrder](#updateorder)
-	-  [Peticiones de microservicio reseñas](#peticiones-de-microservicio-reseñas)
-		- [createReview](#createreview)
-9. [Referencias](#referencias)
-
 ## Información de la asignatura
 ---
 
@@ -103,7 +55,7 @@ Como lo mencionamos se implementaron 3 microservicios y 1 API Gateway, la estruc
 
 ## Arquitectura de la solución planteada
 ---
-![arquitectura](https://github.com/jgomezb11/TopicosEnTelematica/tree/main/static/img/arquitectura.png)
+![arquitectura](https://raw.githubusercontent.com/jgomezb11/TopicosEnTelematica/main/static/img/arquitectura.png)
 La arquitectura de la solución planteada se basa en una arquitectura en capas, donde cada capa se encarga de una función específica en el proceso. La capa del mundo real se encarga de tener un dispositivo que pueda usar el protocolo HTTP 1.1 y poder mandar peticiones al servidor. La API Gateway se encarga de coordinar la comunicación entre dichos microservicios y la comunicación con el usuario. La capa de microservicios se encarga de la lógica de negocio y procesamiento de datos.
 
 Además, se ha utilizado un patron de diseño en la implementación de la solución:
@@ -138,7 +90,7 @@ Una vez tengamos las librerías podemos ejecutar el servidor usando el siguiente
 python3 access_point.py
 ```
 Si todo esta correcto veremos el siguiente mensaje en consola:
-![API Gateway corriendo](https://github.com/jgomezb11/TopicosEnTelematica/tree/main/static/img/api_gateway_funcionando.png)
+![API Gateway corriendo](https://raw.githubusercontent.com/jgomezb11/TopicosEnTelematica/main/static/img/api_gateway_funcionando.png)
 
 Ahora podemos empezar a realizar peticiones a nuestro API.
 #### Librerías:
@@ -168,7 +120,7 @@ Una vez tengamos las librerías podemos ejecutar el servidor usando el siguiente
 python3 back.py
 ```
 Si todo esta correcto veremos el siguiente mensaje en consola:
-![add_stock_funcionando](https://github.com/jgomezb11/TopicosEnTelematica/tree/main/static/img/add_stock_funcionando.png)
+![add_stock_funcionando](https://raw.githubusercontent.com/jgomezb11/TopicosEnTelematica/main/static/img/add_stock_funcionando.png)
 
 Ahora podemos empezar a realizar peticiones a nuestro microservicio.
 #### Librerías:
@@ -196,7 +148,7 @@ Una vez tengamos las librerías podemos ejecutar el servidor usando el siguiente
 python3 back.py
 ```
 Si todo esta correcto veremos el siguiente mensaje en consola:
-![product_inventary_funcionando](https://github.com/jgomezb11/TopicosEnTelematica/tree/main/static/img/product_inventary_funcionando.png)
+![product_inventary_funcionando](https://raw.githubusercontent.com/jgomezb11/TopicosEnTelematica/main/static/img/product_inventary_funcionando.png)
 
 Ahora podemos empezar a realizar peticiones a nuestro microservicio.
 #### Librerías:
@@ -222,7 +174,7 @@ Una vez tengamos las librerías podemos ejecutar el servidor usando el siguiente
 node back.js
 ```
 Nos deberá salir un mensaje de confirmación como este:
-![product_sale_funcionando](https://github.com/jgomezb11/TopicosEnTelematica/tree/main/static/img/product_sale_funcionando.png)
+![product_sale_funcionando](https://raw.githubusercontent.com/jgomezb11/TopicosEnTelematica/main/static/img/product_sale_funcionando.png)
 
 #### Librerías:
 Las librerías necesarias para poder correr este módulo son:
@@ -264,7 +216,7 @@ Función para revisar si un producto existe en el inventario.
 	```
 
 ##### Ejemplo usando postman
-![productExist](https://github.com/jgomezb11/TopicosEnTelematica/tree/main/static/img/productExist.png)
+![productExist](https://raw.githubusercontent.com/jgomezb11/TopicosEnTelematica/main/static/img/productExist.png)
 
 #### writeProduct:
 Función para escribir en la base de datos.
@@ -284,7 +236,7 @@ Función para escribir en la base de datos.
 	}
 	```
 ##### Ejemplo usando postman
-![writeExist](https://github.com/jgomezb11/TopicosEnTelematica/tree/main/static/img/writeExist.png)
+![writeExist](https://raw.githubusercontent.com/jgomezb11/TopicosEnTelematica/main/static/img/writeProduct.png)
 
 ### Peticiones add_stock:
 #### addProduct:
@@ -307,7 +259,7 @@ Función para revisar si un producto existe en el inventario y sino existe lo ag
 	```
 
 ##### Ejemplo usando postman
-![addProduct](https://github.com/jgomezb11/TopicosEnTelematica/tree/main/static/img/addProduct.png)
+![addProduct](https://raw.githubusercontent.com/jgomezb11/TopicosEnTelematica/main/static/img/addProduct.png)
 
 ### Peticiones product_sale:
 #### productSale:
@@ -330,7 +282,7 @@ Función para vender productos si existe en el inventario.
 	```
 
 ##### Ejemplo usando postman
-![productSale](https://github.com/jgomezb11/TopicosEnTelematica/tree/main/static/img/productSale.png)
+![productSale](https://raw.githubusercontent.com/jgomezb11/TopicosEnTelematica/main/static/img/productSale.png)
 ## Referencias
 ---
 
